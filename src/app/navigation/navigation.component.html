@@ -1,0 +1,55 @@
+<!-- <app-navigation> </app-navigation> -->
+
+<!-- <mat-toolbar color="warn">
+    <mat-toolbar-row>
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" color="primary">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span><img src="./assets/devglan.png"></span>
+    </mat-toolbar-row>
+  </mat-toolbar> -->
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #drawer mode="side" opened role="navigation">
+      <mat-nav-list>
+        <a mat-list-item routerLink='/dashboard' [routerLinkActive]="['active']">Dashboard Component</a>
+        <a mat-list-item routerLink='/about' [routerLinkActive]="['active']">About Component</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+<!-- <div class="container">
+  <div class="col col-md-12"> 
+    <div class="col-md-4">
+    <nav>
+        <ul class="mcd-menu">
+          <li>
+            <a href="" routerLink='/dashboard' >
+              <i class="fa fa-home"></i>
+              <strong>DASHBOARD</strong>
+            </a>
+          </li>
+          <li>
+            <a href="" routerLink='/about' class="active">
+              <i class="fa fa-edit"></i>
+              <strong>ABOUT</strong>
+            </a>
+          </li>
+          <li>
+            <a href="" routerLink='/team' >
+              <i class="fa fa-gift"></i>
+              <strong>TEAM</strong>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+    <div class="col-md-8">
+        <router-outlet></router-outlet>
+    </div>
+    </div>
+      
+    </div> -->

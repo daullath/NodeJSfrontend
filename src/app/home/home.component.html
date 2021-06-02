@@ -1,0 +1,17 @@
+﻿<!-- <div class="card mt-4">
+    <h4 *ngIf="!users || !users[0]" class="card-header">Welcome </h4>
+    <h4 *ngIf="users && users[0]" class="card-header">Welcome {{users[0].firstName}} {{users[0].lastName}} </h4>
+</div> -->
+
+<mat-sidenav-container class="example-container" style="height: 50%; margin: 10px;" *ngIf="users && users[0]">
+    <mat-sidenav #drawer mode="side" opened role="navigation">
+        <mat-nav-list>
+            <a mat-list-item routerLink='/dashboard' [routerLinkActive]="['active']" default>DASHBOARD</a>
+            <a mat-list-item routerLink='/about' [routerLinkActive]="['active']">ABOUT</a>
+            <a mat-list-item routerLink='/team' [routerLinkActive]="['active']">TEAM</a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

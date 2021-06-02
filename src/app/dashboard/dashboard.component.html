@@ -1,0 +1,21 @@
+<div *ngIf="dataFetched" style="margin-left: 2%;"> 
+    <div style="font-weight: 800; margin-top: 25px; margin-bottom: 0px;">Welcome {{userData.firstName}} {{userData.lastName}} </div>
+    <div style="font-style: italic; margin-bottom: 15px; ">Last login: {{userData.userInfo.lastLogin}}</div> 
+    <strong>Account Balance: {{userData.userInfo.acctBalance}}</strong> 
+    <table datatable class="cell-border stripe table-bordered" style="width: 50%; margin-bottom: 1rem; margin-top: 20px; color: #212529;">
+            <thead>
+                <tr>
+                    <th #OPnameColumn>Date</th>
+                    <th #BCnameColumn>Description</th>
+                    <th #sortTypeColumn>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let config of acctData">
+                    <td>{{config.date}}</td>
+                    <td>{{config.desc}}</td>
+                    <td>{{ config.amount }}</td>
+                </tr>
+            </tbody>
+        </table>
+</div>
